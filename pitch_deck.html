@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NutriLink — Pitch Deck</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f5f5f0; }
+  .deck { max-width: 900px; margin: 0 auto; padding: 20px; }
+  .slide {
+    background: white;
+    border-radius: 16px;
+    padding: 48px 56px;
+    margin-bottom: 24px;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    page-break-after: always;
+    position: relative;
+  }
+  .slide-number {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    font-size: 12px;
+    color: #bbb;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .slide-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ea580c;
+    background: #fff7ed;
+    padding: 4px 12px;
+    border-radius: 99px;
+    margin-bottom: 20px;
+    width: fit-content;
+  }
+  h1 { font-size: 42px; font-weight: 800; color: #1a1a1a; line-height: 1.1; }
+  h2 { font-size: 32px; font-weight: 700; color: #1a1a1a; margin-bottom: 24px; line-height: 1.2; }
+  h3 { font-size: 18px; font-weight: 600; color: #374151; margin: 16px 0 8px; }
+  p { font-size: 16px; color: #4b5563; line-height: 1.7; margin-bottom: 12px; }
+  .big { font-size: 22px; color: #1a1a1a; font-weight: 500; line-height: 1.5; }
+  .highlight { color: #ea580c; font-weight: 700; }
+  .subtitle { font-size: 18px; color: #6b7280; margin-top: 12px; }
+  ul { list-style: none; }
+  ul li { font-size: 16px; color: #374151; padding: 8px 0; border-bottom: 1px solid #f3f4f6; display: flex; align-items: flex-start; gap: 12px; }
+  ul li:last-child { border-bottom: none; }
+  ul li::before { content: '→'; color: #ea580c; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 24px; }
+  .step { background: #f9fafb; border-radius: 12px; padding: 20px 16px; text-align: center; border: 1px solid #e5e7eb; }
+  .step-num { font-size: 28px; margin-bottom: 8px; }
+  .step-title { font-size: 13px; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; }
+  .step-desc { font-size: 12px; color: #6b7280; line-height: 1.4; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 24px; }
+  .kpi { background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%); border-radius: 16px; padding: 20px; text-align: center; }
+  .kpi-value { font-size: 28px; font-weight: 800; color: #ea580c; }
+  .kpi-label { font-size: 12px; color: #7c3aed; font-weight: 500; margin-top: 4px; }
+  .green-box { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 24px; margin-top: 16px; }
+  .orange-box { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 12px; padding: 24px; margin-top: 16px; }
+  .badge { display: inline-flex; align-items: center; gap: 6px; background: #d1fae5; color: #065f46; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 99px; margin: 4px; }
+  .cover-logo { font-size: 56px; margin-bottom: 16px; }
+  .cover-title { font-size: 52px; font-weight: 900; color: #1a1a1a; line-height: 1; }
+  .cover-sub { font-size: 18px; color: #6b7280; margin-top: 16px; max-width: 600px; }
+  .cover-date { margin-top: 32px; font-size: 14px; color: #9ca3af; }
+  .vs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
+  .vs-box { border-radius: 12px; padding: 24px; }
+  .vs-bad { background: #fef2f2; border: 1px solid #fecaca; }
+  .vs-good { background: #f0fdf4; border: 1px solid #bbf7d0; }
+  .vs-title { font-size: 14px; font-weight: 700; margin-bottom: 12px; }
+  .vs-bad .vs-title { color: #dc2626; }
+  .vs-good .vs-title { color: #16a34a; }
+  .footnote { font-size: 11px; color: #9ca3af; margin-top: 24px; }
+  .contact-url { font-size: 20px; font-weight: 700; color: #ea580c; margin: 8px 0; }
+  .stack-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 20px; }
+  .stack-item { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 16px; }
+  .stack-item .name { font-size: 14px; font-weight: 700; color: #1a1a1a; }
+  .stack-item .role { font-size: 12px; color: #6b7280; margin-top: 2px; }
+  @media print {
+    body { background: white; }
+    .deck { padding: 0; }
+    .slide { box-shadow: none; margin-bottom: 0; border-radius: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="deck">
+
+  <!-- SLIDE 1 — PORTADA -->
+  <div class="slide" style="background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%); color: white;">
+    <div class="slide-number" style="color: rgba(255,255,255,0.4);">1 / 10</div>
+    <div style="font-size: 64px; margin-bottom: 20px;">🔗</div>
+    <h1 style="color: white; font-size: 56px;">NutriLink</h1>
+    <p style="color: rgba(255,255,255,0.85); font-size: 20px; margin-top: 12px; max-width: 580px;">
+      La capa de inteligencia nutricional, económica y predictiva<br>
+      para los sistemas de redistribución alimentaria en España
+    </p>
+    <p style="color: rgba(255,255,255,0.5); font-size: 13px; margin-top: 36px;">
+      Acción contra el Hambre · Códigofacilito 2026 · 27 abril 2026
+    </p>
+  </div>
+
+  <!-- SLIDE 2 — PROBLEMA -->
+  <div class="slide">
+    <div class="slide-number">2 / 10</div>
+    <div class="slide-tag">El problema</div>
+    <h2>España redistribuye comida.<br>Pero no sabe qué nutrientes reparte.</h2>
+    <ul style="margin-top: 8px;">
+      <li><span><strong>140.000 toneladas/año</strong> redistribuidas a 1,3M de personas vulnerables — sin información nutricional</span></li>
+      <li><span><strong>1 de cada 3 niños</strong> en familias usuarias tiene malnutrición oculta (Acción contra el Hambre, 2024)</span></li>
+      <li><span><strong>Ley 1/2025</strong> exige trazabilidad alimentaria que hoy no existe en los bancos de alimentos</span></li>
+      <li><span>Las familias reciben <strong>calorías</strong>, no <strong>dietas equilibradas</strong></span></li>
+    </ul>
+    <p class="footnote">* Datos: Red Española de Bancos de Alimentos (FESBAL) 2024 · Acción contra el Hambre España</p>
+  </div>
+
+  <!-- SLIDE 3 — OPORTUNIDAD -->
+  <div class="slide">
+    <div class="slide-number">3 / 10</div>
+    <div class="slide-tag">Por qué ahora</div>
+    <h2>Tres fuerzas convergen en 2025</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 16px;">
+      <div class="orange-box">
+        <div style="font-size: 32px; margin-bottom: 8px;">⚖️</div>
+        <h3 style="color: #ea580c;">Ley 1/2025</h3>
+        <p style="font-size: 14px; margin-top: 4px;">Obliga a medir y reportar el impacto nutricional de la redistribución alimentaria</p>
+      </div>
+      <div class="orange-box">
+        <div style="font-size: 32px; margin-bottom: 8px;">🔬</div>
+        <h3 style="color: #ea580c;">BEDCA disponible</h3>
+        <p style="font-size: 14px; margin-top: 4px;">Base oficial española de composición de alimentos (AESAN) — datos reales verificables</p>
+      </div>
+      <div class="orange-box">
+        <div style="font-size: 32px; margin-bottom: 8px;">🤖</div>
+        <h3 style="color: #ea580c;">IA accesible</h3>
+        <p style="font-size: 14px; margin-top: 4px;">Gemini / modelos de lenguaje hacen viable la personalización a coste de ONG (~25€/mes)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4 — SOLUCIÓN -->
+  <div class="slide">
+    <div class="slide-number">4 / 10</div>
+    <div class="slide-tag">La solución</div>
+    <h2>No somos una plataforma nueva.<br>Somos la inteligencia que les faltaba.</h2>
+    <div class="green-box" style="margin-top: 20px;">
+      <p class="big">
+        <span class="highlight">NutriLink</span> es la capa de inteligencia que se conecta
+        a los sistemas que <strong>ya usan</strong> los bancos de alimentos —
+        enriqueciendo cada excedente con datos nutricionales oficiales
+        y generando menús equilibrados y trazables automáticamente.
+      </p>
+    </div>
+    <p style="margin-top: 20px; color: #6b7280; font-size: 15px;">
+      Complementa plataformas existentes (SocialFoodCloud, Redistribuye, etc.) — no las sustituye.
+      Implementación en semanas, no meses.
+    </p>
+  </div>
+
+  <!-- SLIDE 5 — CÓMO FUNCIONA -->
+  <div class="slide">
+    <div class="slide-number">5 / 10</div>
+    <div class="slide-tag">Cómo funciona</div>
+    <h2>Del excedente al menú verificado en 4 pasos</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">📥</div>
+        <div class="step-title">1. IMPORTA</div>
+        <div class="step-desc">El banco sube su CSV de excedentes (formato que ya usa)</div>
+      </div>
+      <div class="step">
+        <div class="step-num">🔬</div>
+        <div class="step-title">2. ENRIQUECE</div>
+        <div class="step-desc">Cada producto se cruza con BEDCA oficial<br>🟢 Saludable · 🟡 Moderado · 🔴 Ocasional</div>
+      </div>
+      <div class="step">
+        <div class="step-num">🤖</div>
+        <div class="step-title">3. GENERA</div>
+        <div class="step-desc">La IA crea menús equilibrados con esos ingredientes en español</div>
+      </div>
+      <div class="step" style="background: #f0fdf4; border-color: #bbf7d0;">
+        <div class="step-num">✅</div>
+        <div class="step-title">4. VALIDA</div>
+        <div class="step-desc">Los macros se recalculan con BEDCA — nunca con la IA. Badge trazable.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 6 — DEMO -->
+  <div class="slide" style="background: #0f172a; color: white;">
+    <div class="slide-number" style="color: rgba(255,255,255,0.3);">6 / 10</div>
+    <div style="text-align: center; margin-bottom: 24px;">
+      <span style="background: #ea580c; color: white; font-size: 11px; font-weight: 700; letter-spacing: 2px; padding: 6px 16px; border-radius: 99px;">DEMO EN VIVO</span>
+    </div>
+    <h2 style="color: white; text-align: center; font-size: 28px;">
+      nutrilink-demo.vercel.app/demo
+    </h2>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 32px;">
+      <div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 16px; text-align: center;">
+        <div style="font-size: 24px; margin-bottom: 8px;">📥</div>
+        <div style="font-size: 12px; color: rgba(255,255,255,0.6);">CSV sube</div>
+      </div>
+      <div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 16px; text-align: center;">
+        <div style="font-size: 24px; margin-bottom: 8px;">🔬</div>
+        <div style="font-size: 12px; color: rgba(255,255,255,0.6);">BEDCA enriquece</div>
+      </div>
+      <div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 16px; text-align: center;">
+        <div style="font-size: 24px; margin-bottom: 8px;">🍽️</div>
+        <div style="font-size: 12px; color: rgba(255,255,255,0.6);">IA genera menús</div>
+      </div>
+      <div style="background: rgba(234,88,12,0.3); border-radius: 12px; padding: 16px; text-align: center; border: 1px solid rgba(234,88,12,0.5);">
+        <div style="font-size: 24px; margin-bottom: 8px;">✓</div>
+        <div style="font-size: 12px; color: rgba(255,255,255,0.9); font-weight: 700;">Verificado BEDCA</div>
+      </div>
+    </div>
+    <p style="color: rgba(255,255,255,0.4); font-size: 12px; text-align: center; margin-top: 20px;">
+      Ningún valor nutricional proviene de la IA — todos son calculados con BEDCA oficial (AESAN)
+    </p>
+  </div>
+
+  <!-- SLIDE 7 — DIFERENCIADOR -->
+  <div class="slide">
+    <div class="slide-number">7 / 10</div>
+    <div class="slide-tag">Diferenciador clave</div>
+    <h2>La IA genera. BEDCA certifica.</h2>
+    <div class="vs-grid">
+      <div class="vs-box vs-bad">
+        <div class="vs-title">❌ Otras soluciones</div>
+        <ul style="margin: 0;">
+          <li style="border: none; font-size: 14px; padding: 6px 0;">La IA calcula los macros nutricionales</li>
+          <li style="border: none; font-size: 14px; padding: 6px 0;">Valores no auditables</li>
+          <li style="border: none; font-size: 14px; padding: 6px 0;">No trazable para reporting ESG / Ley 1/2025</li>
+        </ul>
+      </div>
+      <div class="vs-box vs-good">
+        <div class="vs-title">✅ NutriLink</div>
+        <ul style="margin: 0;">
+          <li style="border: none; font-size: 14px; padding: 6px 0;">IA solo genera nombres y estructura de recetas</li>
+          <li style="border: none; font-size: 14px; padding: 6px 0;">BEDCA (AESAN) calcula todos los macros</li>
+          <li style="border: none; font-size: 14px; padding: 6px 0;">Trazabilidad completa: ID BEDCA por ingrediente</li>
+        </ul>
+      </div>
+    </div>
+    <div class="green-box" style="margin-top: 16px;">
+      <p style="font-size: 15px; color: #065f46; font-weight: 600; margin: 0;">
+        → Un banco de alimentos puede auditar cada número. Un juez de la Ley 1/2025 también.
+      </p>
+    </div>
+  </div>
+
+  <!-- SLIDE 8 — IMPACTO -->
+  <div class="slide">
+    <div class="slide-number">8 / 10</div>
+    <div class="slide-tag">Impacto medible</div>
+    <h2>Por cada 100 kg redistribuidos con NutriLink</h2>
+    <div class="kpis">
+      <div class="kpi">
+        <div class="kpi-value">~250</div>
+        <div class="kpi-label">raciones equilibradas<br>(vs solo calorías)</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">~185€</div>
+        <div class="kpi-label">valor nutricional<br>precios MAPA abr. 2025</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">~210 kg</div>
+        <div class="kpi-label">CO₂ evitado<br>factor EU FUSIONS/FAO</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">100%</div>
+        <div class="kpi-label">auditable para<br>ESG + Ley 1/2025</div>
+      </div>
+    </div>
+    <p class="footnote">* Precios MAPA Observatorio de Precios abril 2025 · CO₂: factor medio EU FUSIONS 2.1 kg CO₂/kg alimento rescatado</p>
+  </div>
+
+  <!-- SLIDE 9 — STACK / MODELO -->
+  <div class="slide">
+    <div class="slide-number">9 / 10</div>
+    <div class="slide-tag">Modelo técnico</div>
+    <h2>Producción-ready. Coste de piloto: ~25€/mes.</h2>
+    <div class="stack-grid">
+      <div class="stack-item">
+        <div class="name">Next.js + TypeScript</div>
+        <div class="role">Frontend responsive — funciona en móvil</div>
+      </div>
+      <div class="stack-item">
+        <div class="name">Supabase / PostgreSQL</div>
+        <div class="role">Base de datos — plan gratuito para piloto</div>
+      </div>
+      <div class="stack-item">
+        <div class="name">Google Gemini 1.5 Flash</div>
+        <div class="role">Generación de menús — free tier 1.500 req/día</div>
+      </div>
+      <div class="stack-item" style="background: #f0fdf4; border-color: #bbf7d0;">
+        <div class="name" style="color: #15803d;">BEDCA (AESAN)</div>
+        <div class="role">Base oficial — integrada localmente. Sin API externa.</div>
+      </div>
+      <div class="stack-item">
+        <div class="name">Vercel</div>
+        <div class="role">Deploy cloud — plan gratuito para piloto</div>
+      </div>
+      <div class="stack-item" style="background: #fff7ed; border-color: #fed7aa;">
+        <div class="name" style="color: #c2410c;">Coste total piloto</div>
+        <div class="role" style="font-weight: 700; color: #ea580c;">~25€/mes por entidad</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 10 — SIGUIENTE PASO -->
+  <div class="slide" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: white;">
+    <div class="slide-number" style="color: rgba(255,255,255,0.3);">10 / 10</div>
+    <div style="font-size: 48px; margin-bottom: 16px;">🚀</div>
+    <h2 style="color: white; font-size: 36px;">Piloto listo para probarse.</h2>
+    <p style="color: rgba(255,255,255,0.85); font-size: 18px; margin-top: 12px; max-width: 560px;">
+      Buscamos <strong style="color: white;">1 banco de alimentos o comedor social</strong>
+      que quiera ser el primer caso de uso validado en España.
+    </p>
+    <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 8px;">
+      <div style="color: rgba(255,255,255,0.6); font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Links</div>
+      <div class="contact-url" style="color: white;">🌐 nutrilink-demo.vercel.app/demo</div>
+      <div class="contact-url" style="color: rgba(255,255,255,0.8); font-size: 16px;">📁 github.com/GiuLogic/nutrilink-demo</div>
+      <div class="contact-url" style="color: rgba(255,255,255,0.8); font-size: 16px;">✉️ giulialgz@gmail.com</div>
+    </div>
+  </div>
+
+  <!-- BONUS: GUIÓN -->
+  <div class="slide" style="background: #fafaf9; border: 2px dashed #e5e7eb;">
+    <div class="slide-tag" style="background: #f3f4f6; color: #374151;">Guión 90 segundos — NO proyectar</div>
+    <h2 style="font-size: 22px; color: #374151;">Para memorizar antes de la reunión</h2>
+    <div style="background: #1a1a1a; border-radius: 12px; padding: 24px; margin-top: 16px; color: #e5e7eb; font-family: monospace; font-size: 14px; line-height: 2;">
+      [0:00] "España redistribuye 140.000 toneladas al año a familias vulnerables —<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pero nadie sabe su valor nutricional."<br><br>
+      [0:15] "Las familias reciben calorías, no dietas equilibradas.<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;La Ley 1/2025 exige trazabilidad que hoy no existe."<br><br>
+      [0:30] "NutriLink es la capa de inteligencia que se conecta<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a los sistemas que ya usan. No sustituimos — potenciamos."<br><br>
+      [0:45] <span style="color: #34d399;">[ABRE LA DEMO]</span> "Subo el CSV → BEDCA enriquece en tiempo real<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ IA genera menús → NutriLink recalcula macros con BEDCA."<br><br>
+      [1:15] "250 raciones equilibradas por cada 100 kg. 100% auditable."<br><br>
+      [1:30] <span style="color: #f59e0b;">"Piloto listo. Buscamos el primer banco de alimentos que quiera probarlo."</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
