@@ -1,0 +1,841 @@
+[browser] Uncaught TypeError: Cannot read properties of undefined (reading 'addListener')
+    at new s.bm (blob:http://localhost:3000/682f3569-4ad9-4311-964f-0ad558014a5b:12:19003)
+    at <unknown> (blob:http://localhost:3000/682f3569-4ad9-4311-964f-0ad558014a5b:12:31065)
+    at <unknown> (blob:http://localhost:3000/682f3569-4ad9-4311-964f-0ad558014a5b:12:32675)
+    at <unknown> (blob:http://localhost:3000/682f3569-4ad9-4311-964f-0ad558014a5b:12:32679)
+    at <unknown> (blob:http://localhost:3000/682f3569-4ad9-4311-964f-0ad558014a5b:14:11)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="es"
+-                         crxemulator=""
+                        >
+                  ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/familia" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="es"
+-                         crxemulator=""
+                        >
+                  ...
+ 
+[browser] Uncaught TypeError: Cannot read properties of undefined (reading 'addListener')
+    at new s.bm (blob:http://localhost:3000/a2b94361-4b48-416c-9dbf-ee57758cc0cf:12:19003)
+    at <unknown> (blob:http://localhost:3000/a2b94361-4b48-416c-9dbf-ee57758cc0cf:12:31065)
+    at <unknown> (blob:http://localhost:3000/a2b94361-4b48-416c-9dbf-ee57758cc0cf:12:32675)
+    at <unknown> (blob:http://localhost:3000/a2b94361-4b48-416c-9dbf-ee57758cc0cf:12:32679)
+    at <unknown> (blob:http://localhost:3000/a2b94361-4b48-416c-9dbf-ee57758cc0cf:14:11)
+[browser] Uncaught TypeError: Cannot read properties of undefined (reading 'addListener')
+    at new s.bm (blob:http://localhost:3000/98473fdd-6c0f-4c7e-9a80-a67ef779bdcd:12:19003)
+    at <unknown> (blob:http://localhost:3000/98473fdd-6c0f-4c7e-9a80-a67ef779bdcd:12:31065)
+    at <unknown> (blob:http://localhost:3000/98473fdd-6c0f-4c7e-9a80-a67ef779bdcd:12:32675)
+    at <unknown> (blob:http://localhost:3000/98473fdd-6c0f-4c7e-9a80-a67ef779bdcd:12:32679)
+    at <unknown> (blob:http://localhost:3000/98473fdd-6c0f-4c7e-9a80-a67ef779bdcd:14:11)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/demo" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="es"
+-                         crxemulator=""
+                        >
+                  ...
+ 
+[browser] Uncaught TypeError: Cannot read properties of undefined (reading 'addListener')
+    at new s.bm (blob:http://localhost:3000/7b999c7a-7161-4c26-b3c3-5cbf72d7d25d:12:19003)
+    at <unknown> (blob:http://localhost:3000/7b999c7a-7161-4c26-b3c3-5cbf72d7d25d:12:31065)
+    at <unknown> (blob:http://localhost:3000/7b999c7a-7161-4c26-b3c3-5cbf72d7d25d:12:32675)
+    at <unknown> (blob:http://localhost:3000/7b999c7a-7161-4c26-b3c3-5cbf72d7d25d:12:32679)
+    at <unknown> (blob:http://localhost:3000/7b999c7a-7161-4c26-b3c3-5cbf72d7d25d:14:11)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/dashboard" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="es"
+-                         crxemulator=""
+                        >
+                  ...
+ 
+[browser] ⨯ unhandledRejection: TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at lookupNutrition (src/lib/nutrition-db.ts:88:31)
+    at enrichRow (src/components/CSVImporter.tsx:65:39)
+    at async handleFile (src/components/CSVImporter.tsx:95:24)
+  86 |  */
+  87 | export function lookupNutrition(foodName: string): BEDCAEntry | null {
+> 88 |   const normalized = foodName.toLowerCase().trim();
+     |                               ^
+  89 |
+  90 |   // Exact match
+  91 |   const exact = BEDCA_DATABASE.find(e => e.name.toLowerCase() === normalized);
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/demo" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="es"
+-                         crxemulator=""
+                        >
+                  ...
+ 
+[browser] Uncaught TypeError: Cannot read properties of undefined (reading 'addListener')
+    at new s.bm (blob:http://localhost:3000/a4ab7ba8-2b98-4994-9e7d-1a4eb6898e0a:12:19003)
+    at <unknown> (blob:http://localhost:3000/a4ab7ba8-2b98-4994-9e7d-1a4eb6898e0a:12:31065)
+    at <unknown> (blob:http://localhost:3000/a4ab7ba8-2b98-4994-9e7d-1a4eb6898e0a:12:32675)
+    at <unknown> (blob:http://localhost:3000/a4ab7ba8-2b98-4994-9e7d-1a4eb6898e0a:12:32679)
+    at <unknown> (blob:http://localhost:3000/a4ab7ba8-2b98-4994-9e7d-1a4eb6898e0a:14:11)
+[browser] ⨯ unhandledRejection: TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at lookupNutrition (src/lib/nutrition-db.ts:88:31)
+    at enrichRow (src/components/CSVImporter.tsx:65:39)
+    at async handleFile (src/components/CSVImporter.tsx:95:24)
+  86 |  */
+  87 | export function lookupNutrition(foodName: string): BEDCAEntry | null {
+> 88 |   const normalized = foodName.toLowerCase().trim();
+     |                               ^
+  89 |
+  90 |   // Exact match
+  91 |   const exact = BEDCA_DATABASE.find(e => e.name.toLowerCase() === normalized);
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/demo" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="es"
+-                         crxemulator=""
+                        >
+                  ...
+ 
+[browser] Uncaught TypeError: Cannot read properties of undefined (reading 'addListener')
+    at new s.bm (blob:http://localhost:3000/5bf7c2e4-6aef-41c6-942b-0f2933e33bec:12:19003)
+    at <unknown> (blob:http://localhost:3000/5bf7c2e4-6aef-41c6-942b-0f2933e33bec:12:31065)
+    at <unknown> (blob:http://localhost:3000/5bf7c2e4-6aef-41c6-942b-0f2933e33bec:12:32675)
+    at <unknown> (blob:http://localhost:3000/5bf7c2e4-6aef-41c6-942b-0f2933e33bec:12:32679)
+    at <unknown> (blob:http://localhost:3000/5bf7c2e4-6aef-41c6-942b-0f2933e33bec:14:11)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/familia" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="es"
+-                         crxemulator=""
+                        >
+                  ...
+ 
+[browser] Uncaught TypeError: Cannot read properties of undefined (reading 'addListener')
+    at new s.bm (blob:http://localhost:3000/def023db-90d2-48ee-a81e-e2807a2c86c6:12:19003)
+    at <unknown> (blob:http://localhost:3000/def023db-90d2-48ee-a81e-e2807a2c86c6:12:31065)
+    at <unknown> (blob:http://localhost:3000/def023db-90d2-48ee-a81e-e2807a2c86c6:12:32675)
+    at <unknown> (blob:http://localhost:3000/def023db-90d2-48ee-a81e-e2807a2c86c6:12:32679)
+    at <unknown> (blob:http://localhost:3000/def023db-90d2-48ee-a81e-e2807a2c86c6:14:11)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/demo" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="es"
+-                         crxemulator=""
+                        >
+                  ...
+ 
+[browser] Uncaught TypeError: Cannot read properties of undefined (reading 'addListener')
+    at new s.bm (blob:http://localhost:3000/8cf968b3-e2af-4064-8a17-d2a225fd7293:12:19003)
+    at <unknown> (blob:http://localhost:3000/8cf968b3-e2af-4064-8a17-d2a225fd7293:12:31065)
+    at <unknown> (blob:http://localhost:3000/8cf968b3-e2af-4064-8a17-d2a225fd7293:12:32675)
+    at <unknown> (blob:http://localhost:3000/8cf968b3-e2af-4064-8a17-d2a225fd7293:12:32679)
+    at <unknown> (blob:http://localhost:3000/8cf968b3-e2af-4064-8a17-d2a225fd7293:14:11)
+⨯ ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  [90m173 |[0m [90m// ─── Provider: Gemini ─────────────────────────────────────────────────────────[0m
+  [90m174 |[0m [36masync[0m [36mfunction[0m callGemini(foodItems: [33mFoodItem[0m[]): [33mPromise[0m<[33mAIRecipeRaw[0m[]> {
+[31m[1m>[0m [90m175 |[0m   [36mconst[0m { [33mGoogleGenerativeAI[0m } = [36mawait[0m [36mimport[0m([32m'@google/generative-ai'[0m);
+  [90m    |[0m                                        [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m176 |[0m   [36mconst[0m apiKey = process.env.[33mGOOGLE_API_KEY[0m!;
+  [90m177 |[0m   [36mconst[0m genAI = [36mnew[0m [33mGoogleGenerativeAI[0m(apiKey);
+  [90m178 |[0m   [36mconst[0m model = genAI.getGenerativeModel({
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] Uncaught Error: ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./src/app/api/generate-recipes/route.ts:175:40)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./src/app/api/generate-recipes/route.ts:175:40)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+[browser] Uncaught Error: ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./src/app/api/generate-recipes/route.ts:175:40)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./src/app/api/generate-recipes/route.ts:175:40)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+[browser] Uncaught Error: ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./src/app/api/generate-recipes/route.ts:175:40)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./src/app/api/generate-recipes/route.ts:175:40)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+[browser] Uncaught Error: ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./src/app/api/generate-recipes/route.ts:175:40)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./src/app/api/generate-recipes/route.ts:175:40)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] Uncaught TypeError: Cannot read properties of undefined (reading 'addListener')
+    at new s.bm (blob:http://localhost:3000/07a526a6-1aee-4204-912f-f0fedc63b1d1:12:19003)
+    at <unknown> (blob:http://localhost:3000/07a526a6-1aee-4204-912f-f0fedc63b1d1:12:31065)
+    at <unknown> (blob:http://localhost:3000/07a526a6-1aee-4204-912f-f0fedc63b1d1:12:32675)
+    at <unknown> (blob:http://localhost:3000/07a526a6-1aee-4204-912f-f0fedc63b1d1:12:32679)
+    at <unknown> (blob:http://localhost:3000/07a526a6-1aee-4204-912f-f0fedc63b1d1:14:11)
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] Uncaught TypeError: Cannot read properties of undefined (reading 'addListener')
+    at new s.bm (blob:http://localhost:3000/7b44e93c-ea2d-48ca-b42e-dde21708853a:12:19003)
+    at <unknown> (blob:http://localhost:3000/7b44e93c-ea2d-48ca-b42e-dde21708853a:12:31065)
+    at <unknown> (blob:http://localhost:3000/7b44e93c-ea2d-48ca-b42e-dde21708853a:12:32675)
+    at <unknown> (blob:http://localhost:3000/7b44e93c-ea2d-48ca-b42e-dde21708853a:12:32679)
+    at <unknown> (blob:http://localhost:3000/7b44e93c-ea2d-48ca-b42e-dde21708853a:14:11)
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] Uncaught Error: ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./src/app/api/generate-recipes/route.ts:175:40)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./src/app/api/generate-recipes/route.ts:175:40)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] Uncaught TypeError: Cannot read properties of undefined (reading 'addListener')
+    at new s.bm (blob:http://localhost:3000/43b6dca3-53f8-4a94-8bcf-570f8b642ddb:12:19003)
+    at <unknown> (blob:http://localhost:3000/43b6dca3-53f8-4a94-8bcf-570f8b642ddb:12:31065)
+    at <unknown> (blob:http://localhost:3000/43b6dca3-53f8-4a94-8bcf-570f8b642ddb:12:32675)
+    at <unknown> (blob:http://localhost:3000/43b6dca3-53f8-4a94-8bcf-570f8b642ddb:12:32679)
+    at <unknown> (blob:http://localhost:3000/43b6dca3-53f8-4a94-8bcf-570f8b642ddb:14:11)
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] Uncaught Error: ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./src/app/api/generate-recipes/route.ts:175:40)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./src/app/api/generate-recipes/route.ts:175:40)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] Uncaught TypeError: Cannot read properties of undefined (reading 'addListener')
+    at new s.bm (blob:http://localhost:3000/b71c61f7-8882-41d5-bd23-a8d5527229a3:12:19003)
+    at <unknown> (blob:http://localhost:3000/b71c61f7-8882-41d5-bd23-a8d5527229a3:12:31065)
+    at <unknown> (blob:http://localhost:3000/b71c61f7-8882-41d5-bd23-a8d5527229a3:12:32675)
+    at <unknown> (blob:http://localhost:3000/b71c61f7-8882-41d5-bd23-a8d5527229a3:12:32679)
+    at <unknown> (blob:http://localhost:3000/b71c61f7-8882-41d5-bd23-a8d5527229a3:14:11)
+[browser] ./src/app/api/generate-recipes/route.ts:175:40
+Module not found: Can't resolve '@google/generative-ai'
+  173 | // ─── Provider: Gemini ─────────────────────────────────────────────────────────
+  174 | async function callGemini(foodItems: FoodItem[]): Promise<AIRecipeRaw[]> {
+> 175 |   const { GoogleGenerativeAI } = await import('@google/generative-ai');
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  176 |   const apiKey = process.env.GOOGLE_API_KEY!;
+  177 |   const genAI = new GoogleGenerativeAI(apiKey);
+  178 |   const model = genAI.getGenerativeModel({
+
+https://nextjs.org/docs/messages/module-not-found 
