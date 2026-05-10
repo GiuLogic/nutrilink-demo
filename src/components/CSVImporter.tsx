@@ -1,15 +1,24 @@
 "use client";
 
 import { useState } from "react";
-import { Upload, CheckCircle, AlertCircle, Database, FileText } from "lucide-react";
+import { Upload, CheckCircle, AlertCircle, Database, FileText, FileSpreadsheet } from "lucide-react";
 import { lookupNutrition } from "@/lib/nutrition-db";
 import type { FoodItem } from "@/types";
 
-// ─── Formatos de CSV soportados ───────────────────────────────────────────────
+// ─── Formatos soportados ──────────────────────────────────────────────────────
+// Archivos: .csv, .txt (delimitado por comas o tabuladores), .xlsx, .xls (Excel)
 // Formato A (demo simple):  nombre_producto, cantidad_kg, fecha_caducidad, id_bedca, donante
 // Formato B (inventario):   ID_Lote, Producto, Categoria, Cantidad_kg, BEDCA_ID,
 //                           Kcal_100g, Proteinas_g, Carbohidratos_g, Grasas_g,
 //                           Precio_MAPA_kg, Valor_Total_Euros
+
+const SUPPORTED_EXTENSIONS = ['.csv', '.txt', '.xlsx', '.xls'];
+const SUPPORTED_MIMES = [
+  'text/csv',
+  'text/plain',
+  'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+  'application/vnd.ms-excel',
+];
 
 interface NormalizedRow {
   nombre: string;
@@ -177,12 +186,47 @@ export default function CSVImporter({ onImportComplete }: CSVImporterProps) {
   const [isProcessing, setIsProcessing] = useState(false);
 
   const handleFile = async (file: File) => {
-    if (!file.name.endsWith('.csv')) { alert('Por favor, sube un archivo CSV'); return; }
-    const text = await file.text();
-    const parsed = parseCSV(text);
+    const ext = file.name.toLowerCase().slice(file.name.lastIndexOf('.'));
+    
+    if (!SUPPORTED_EXTENSIONS.includes(ext)) {
+      alert(`Formato no soportado: ${ext}\n\nFormatos aceptados: CSV, TXT, Excel (.xlsx, .xls)`);
+      return;
+    }
+
+    let parsed: NormalizedRow[] = [];
+
+    if (ext === '.xlsx' || ext === '.xls') {
+      // ─── Excel parsing ────────────────────────────────────────────────
+      try {
+        const XLSX = await import('xlsx');
+        const buffer = await file.arrayBuffer();
+        const workbook = XLSX.read(buffer, { type: 'array' });
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+        // Convertir a CSV y reutilizar el parser existente
+        const csvText = XLSX.utils.sheet_to_csv(sheet);
+        parsed = parseCSV(csvText);
+      } catch (err) {
+        alert('Error al leer el archivo Excel. Asegúrate de que es un archivo .xlsx o .xls válido.');
+        console.error('Excel parse error:', err);
+        return;
+      }
+    } else {
+      // ─── CSV / TXT parsing ────────────────────────────────────────────
+      let text = await file.text();
+      // Si es TXT con tabuladores, convertir a comas
+      if (ext === '.txt' && text.includes('\t') && !text.includes(',')) {
+        text = text.replace(/\t/g, ',');
+      }
+      // Si es TXT con punto y coma (formato europeo), convertir a comas
+      if (ext === '.txt' && text.includes(';') && !text.includes(',')) {
+        text = text.replace(/;/g, ',');
+      }
+      parsed = parseCSV(text);
+    }
 
     if (parsed.length === 0) {
-      alert('No se encontraron filas válidas en el CSV. Comprueba el formato.');
+      alert('No se encontraron filas válidas. Comprueba que el archivo tiene una cabecera con "nombre_producto" o "Producto" y al menos una fila de datos.');
       return;
     }
 
@@ -270,20 +314,35 @@ export default function CSVImporter({ onImportComplete }: CSVImporterProps) {
           }`}
         >
           <Upload className="w-12 h-12 mx-auto text-orange-500 mb-3" />
-          <h3 className="font-semibold text-gray-800 mb-1">Importar CSV con Excedentes</h3>
+          <h3 className="font-semibold text-gray-800 mb-1">Importar inventario de excedentes</h3>
           <p className="text-sm text-gray-500 mb-4">
-            Arrastra tu archivo CSV o haz clic para seleccionar
+            Arrastra tu archivo o haz clic para seleccionar
           </p>
+          {/* Formatos soportados */}
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <span className="inline-flex items-center gap-1 text-xs bg-green-50 text-green-700 font-medium px-2 py-1 rounded-md border border-green-200">
+              <FileText className="w-3 h-3" /> .csv
+            </span>
+            <span className="inline-flex items-center gap-1 text-xs bg-blue-50 text-blue-700 font-medium px-2 py-1 rounded-md border border-blue-200">
+              <FileSpreadsheet className="w-3 h-3" /> .xlsx
+            </span>
+            <span className="inline-flex items-center gap-1 text-xs bg-blue-50 text-blue-700 font-medium px-2 py-1 rounded-md border border-blue-200">
+              <FileSpreadsheet className="w-3 h-3" /> .xls
+            </span>
+            <span className="inline-flex items-center gap-1 text-xs bg-gray-50 text-gray-600 font-medium px-2 py-1 rounded-md border border-gray-200">
+              <FileText className="w-3 h-3" /> .txt
+            </span>
+          </div>
           <p className="text-xs text-gray-400 mb-4">
-            Compatible con: inventario de 100 productos · cesta simple · cualquier CSV con columna "Producto"
+            Compatible con: inventarios Excel de bancos de alimentos · cestas CSV · archivos de texto delimitados
           </p>
-          <input type="file" accept=".csv" onChange={handleFileInput} className="hidden" id="csv-upload" />
+          <input type="file" accept=".csv,.txt,.xlsx,.xls" onChange={handleFileInput} className="hidden" id="csv-upload" />
           <label
             htmlFor="csv-upload"
             className="inline-flex items-center gap-2 bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-orange-700 cursor-pointer transition-colors"
           >
-            <FileText className="w-4 h-4" />
-            Seleccionar archivo CSV
+            <Upload className="w-4 h-4" />
+            Seleccionar archivo
           </label>
           <div className="mt-4 pt-4 border-t border-gray-200">
             <button
